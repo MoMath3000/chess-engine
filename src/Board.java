@@ -14,10 +14,10 @@ public class Board {
         String returnString = "";
         while (row < 8 && col < 8) {
             returnString += pieces[row][col].toString() + "\t";
-            if (row == 7) {
+            if (col == 7) {
                 returnString += "\n";
-                col++;
-                row = 0;
+                row++;
+                col = 0;
             } else {
                 row++;
             }
