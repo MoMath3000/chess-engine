@@ -17,7 +17,7 @@ public class Rook extends Piece {
         or the column between 0 and 7 are valid.
          */
         for (currentRow < 8) {
-            if ((board.pieces[currentRow][currentCol] == null) & !King.inCheck(this.color))
+            if ((this.board.pieces[currentRow][currentCol] == null) & !King.inCheck(this.color))
         }
         return moveList;
     }

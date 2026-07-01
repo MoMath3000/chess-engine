@@ -5,6 +5,7 @@ import java.util.List;
 public abstract class Piece {
     protected int row;
     protected int column;
+    protected Board board;
 
     public enum PieceType { KING, QUEEN, ROOK, BISHOP, KNIGHT, PAWN, NULL };
     public enum Color { WHITE, BLACK, NULL }
@@ -22,6 +23,7 @@ public abstract class Piece {
         this.column = column;
         this.pieceType = pieceType;
         this.pieceValue = pieceValue;
+        this.board = board;
         System.out.println(this.pieceType + " created at coordinate " + this.getCoordinate());
     }
 
