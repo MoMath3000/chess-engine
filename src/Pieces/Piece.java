@@ -1,6 +1,7 @@
 package Pieces;
 
 import java.util.List;
+import Chess.*;
 
 public abstract class Piece {
     protected int row;

@@ -1,6 +1,7 @@
 package Pieces;
 
 import java.util.List;
+import Chess.*;
 
 public class Rook extends Piece {
     String pieceType = "Pieces.Rook";
@@ -12,12 +13,16 @@ public class Rook extends Piece {
         List<Move> moveList;
         int currentRow = this.getRow();
         int currentCol = this.getCol();
+        Piece currentPiece = board.getPiece(currentRow, currentCol);
         /* movement logic!!!!
         for rooks, only any moves that add to the row between 0 and 7
         or the column between 0 and 7 are valid.
          */
-        for (currentRow < 8) {
-            if ((this.board.pieces[currentRow][currentCol] == null) & !King.inCheck(this.color))
+        while (currentRow < 8) {
+            if (currentPiece == null) {
+                Move move = new Move(Converter.intsToAlgebraicNotation(currentRow, currentCol));
+                moveList.add(move);
+            }
         }
         return moveList;
     }

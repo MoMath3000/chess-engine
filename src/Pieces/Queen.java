@@ -1,5 +1,8 @@
 package Pieces;
 
+import java.util.List;
+import Chess.*;
+
 public class Queen extends Piece {
     String pieceType = "Pieces.Queen";
     public Queen(int row, int column, Color color) {

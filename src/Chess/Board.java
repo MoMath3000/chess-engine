@@ -1,3 +1,5 @@
+package Chess;
+
 import Pieces.Piece;
 
 public class Board {
@@ -31,5 +33,9 @@ public class Board {
 
     public void getBoardState() {
         System.out.println(this.pieces.toString());
+    }
+
+    public Piece getPiece(int row, int col) {
+        return this.pieces[row][col];
     }
 }
